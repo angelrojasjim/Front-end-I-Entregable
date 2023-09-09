@@ -1,0 +1,912 @@
+:root {
+  /* Colores */
+  --color-principal: #8b48bf;
+  --color-aguamarina: #3cddf3;
+  --color-hover-boton: rgba(139, 72, 191, 0.7);
+  --color-fondo-enumeracion: rgba(139, 72, 191, 0.3);
+  --color-h1: #232c50;
+  --color-enlace: #242e52;
+  --color-enlace-hover: rgba(36, 46, 82, 0.6);
+  --color-titulo-enumeracion: #323851;
+  --color-footer: #1e1e26;
+  --color-blanco: #ffffff;
+  --color-negro: #000000;
+  --color-hover-navbar: rgba(36, 46, 82, 0.6);
+  --color-gris-fuente: #b9b9c1;
+  --color-gris-copyright: #8c8c94;
+  --color-gris-tenistas: #fafafa;
+
+  /* Fuente */
+  --fuente-principal: "Be Vietnam Pro", sans-serif;
+
+  /* Sombra */
+  --sombra: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem - 10px */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+body {
+  font-family: var(--fuente-principal);
+}
+
+.boton-principal {
+  background-color: var(--color-principal);
+  padding: 1.4rem 0;
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 4rem;
+  font-size: 1.3rem;
+  width: 16rem;
+}
+
+.boton-principal:hover {
+  background-color: var(--color-hover-boton);
+}
+
+@media (min-width: 280px) and (max-width: 820px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  header {
+    padding: 4rem 5.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .boton-contacto {
+    display: none;
+  }
+
+  header i {
+    font-size: 3.6rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3.2rem;
+    gap: 7.2rem;
+  }
+
+  .hero img {
+    width: 100%;
+  }
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .principal h1 {
+    color: var(--color-h1);
+    font-size: 3.8rem;
+    text-align: end;
+  }
+
+  .principal p {
+    text-align: end;
+    font-weight: 500;
+  }
+
+  .contenedor-boton {
+    display: flex;
+    justify-content: end;
+  }
+
+  .seccion-uno {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 3.2rem 1.6rem;
+    background-color: var(--color-aguamarina);
+  }
+
+  .seccion-uno h2 {
+    font-size: 3rem;
+    color: var(--color-blanco);
+  }
+
+  .seccion-uno p {
+    color: var(--color-blanco);
+  }
+
+  .seccion-dos {
+    padding: 4.8rem 0 4.8rem 2.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .contenedor-article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .contenedor-titulo {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    background-color: var(--color-fondo-enumeracion);
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+  }
+
+  .contenedor-titulo h3 {
+    font-size: 1.4rem;
+  }
+
+  .enumeracion {
+    background-color: var(--color-principal);
+    padding: 1.3rem 2.4rem;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.3rem;
+  }
+
+  .info {
+    padding: 1rem;
+  }
+
+  .info p {
+    color: var(--color-gris-fuente);
+    font-size: 1.2rem;
+  }
+
+  .seccion-tres {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    padding: 2.4rem;
+  }
+
+  .seccion-tres h2 {
+    font-size: 2.8rem;
+    color: var(--color-h1);
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .tenistas {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+    gap: 2.4rem;
+    height: 32rem;
+  }
+
+  .contenedor-tenistas {
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    background-color: var(--color-gris-tenistas);
+  }
+
+  .info-tenistas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+    padding: 0 2rem 0 2rem;
+    position: relative;
+    bottom: 4rem;
+  }
+
+  .info-tenistas img {
+    border-radius: 50%;
+  }
+
+  .info-tenistas h3 {
+    font-size: 1.4rem;
+    color: var(--color-h1);
+  }
+
+  .info-tenistas p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-gris-fuente);
+  }
+
+  .carrusel-nav {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 2.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  /* .navarro,
+    .sanyo {
+        display: none;
+    } */
+
+  .contenedor-boton-secundario {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .seccion-cuatro {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    padding: 4rem 5rem;
+    background-color: var(--color-aguamarina);
+  }
+
+  .seccion-cuatro h2 {
+    color: var(--color-blanco);
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .boton-secundario {
+    background-color: var(--color-h1);
+    padding: 1.4rem 0;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.3rem;
+    width: 18rem;
+    box-shadow: var(--sombra);
+  }
+
+  footer {
+    background-color: var(--color-footer);
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  .contenedor-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .contenedor-footer form {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  .contenedor-footer form input {
+    padding: 1.4rem 1.4rem;
+    width: 80%;
+    border-radius: 4rem;
+  }
+
+  .boton-terciario {
+    background-color: var(--color-principal);
+    padding: 1.4rem 2.4rem;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.3rem;
+  }
+
+  .navbar-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.4rem;
+  }
+
+  .navbar-footer ul {
+    list-style: none;
+  }
+
+  .navbar-footer ul li {
+    line-height: 2.4;
+  }
+
+  .navbar-footer ul li a {
+    text-decoration: none;
+    color: var(--color-blanco);
+  }
+
+  .contenedor-nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .navbar-redes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar-redes a {
+    color: var(--color-blanco);
+    font-size: 2rem;
+  }
+
+  .contenedor-footer a {
+    text-align: center;
+  }
+
+  footer p {
+    color: var(--color-gris-copyright);
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1282px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    gap: 3.2rem;
+  }
+
+  header i {
+    color: transparent;
+    display: none;
+    position: absolute;
+  }
+
+  .navbar ul {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  .navbar ul li a {
+    color: var(--color-enlace);
+  }
+
+  .navbar ul li a:hover {
+    color: var(--color-enlace-hover);
+  }
+
+  .boton-contacto {
+    box-shadow: var(--sombra);
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 8rem 2.4rem;
+  }
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .principal h1 {
+    color: var(--color-h1);
+    font-size: 3.8rem;
+    text-align: end;
+  }
+
+  .principal p {
+    text-align: end;
+    font-weight: 500;
+  }
+
+  .contenedor-boton {
+    display: flex;
+    justify-content: end;
+  }
+
+  .seccion-uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    gap: 3.2rem;
+    background-color: var(--color-principal);
+  }
+
+  .seccion-uno h2 {
+    color: var(--color-blanco);
+    width: 50%;
+  }
+
+  .seccion-uno p {
+    color: var(--color-blanco);
+    width: 50%;
+  }
+
+  .seccion-dos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.8rem;
+    gap: 4rem;
+    background-color: var(--color-gris-tenistas);
+  }
+
+  .contenedor-article {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .contenido {
+    width: 50%;
+  }
+
+  .solitario {
+    margin: auto;
+  }
+
+  .contenedor-titulo {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+  }
+
+  .enumeracion {
+    background-color: var(--color-principal);
+    padding: 1.3rem 2.4rem;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 4rem;
+  }
+
+  .info {
+    padding: 0 8rem;
+  }
+
+  .info p {
+    color: var(--color-gris-fuente);
+  }
+
+  .seccion-tres {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 4rem;
+  }
+
+  .seccion-tres h2 {
+    font-size: 3.2rem;
+    color: var(--color-h1);
+  }
+
+  .tenistas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gris-tenistas);
+    margin-top: 3.2rem;
+  }
+
+  .info-tenistas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    position: relative;
+    bottom: 4.8rem;
+    padding: 1.6rem;
+  }
+
+  .info-tenistas img {
+    border-radius: 50%;
+  }
+
+  .info-tenistas h3 {
+    color: var(--color-h1);
+  }
+
+  .info-tenistas p {
+    text-align: center;
+    color: var(--color-gris-fuente);
+  }
+
+  .seccion-cuatro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--color-principal);
+  }
+
+  .seccion-cuatro h2 {
+    width: 30%;
+    color: var(--color-blanco);
+  }
+
+  .boton-secundario {
+    background-color: var(--color-blanco);
+    padding: 1.4rem 0;
+    color: var(--color-principal);
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.3rem;
+    width: 16rem;
+  }
+
+  footer {
+    padding: 4rem 8rem;
+    background-color: var(--color-footer);
+  }
+
+  .contenedor-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .contenedor-nav-logo {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .navbar-redes {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  .navbar-redes a {
+    color: var(--color-blanco);
+    font-size: 2.4rem;
+  }
+
+  .navbar-footer {
+    display: flex;
+    gap: 12.4rem;
+  }
+
+  .navbar-footer ul li {
+    line-height: 1.6;
+  }
+
+  .navbar-footer ul li a {
+    color: var(--color-blanco);
+  }
+
+  .contenedor-footer form {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .contenedor-footer form input {
+    padding: 1.4rem 1.4rem;
+    width: 80%;
+    border-radius: 4rem;
+  }
+
+  .boton-terciario {
+    background-color: var(--color-principal);
+    padding: 1.4rem 2.4rem;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 4rem;
+  }
+
+  footer p {
+    text-align: end;
+    font-size: 1.4rem;
+    color: var(--color-gris-copyright);
+  }
+}
+
+@media (min-width: 1282px) and (max-width: 2000px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  header i {
+    color: transparent;
+    display: none;
+    position: absolute;
+  }
+
+  .navbar ul {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  .navbar ul li a {
+    color: var(--color-enlace);
+  }
+
+  .navbar ul li a:hover {
+    color: var(--color-enlace-hover);
+  }
+
+  .boton-contacto {
+    box-shadow: var(--sombra);
+  }
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    padding: 8rem 2.4rem;
+  }
+
+  .principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 30%;
+  }
+
+  .principal h1 {
+    color: var(--color-h1);
+    font-size: 3.8rem;
+    text-align: end;
+  }
+
+  .principal p {
+    text-align: end;
+    font-weight: 500;
+  }
+
+  .contenedor-boton {
+    display: flex;
+    justify-content: end;
+  }
+
+  .seccion-uno {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 16rem;
+    background-color: var(--color-principal);
+  }
+
+  .seccion-uno h2 {
+    color: var(--color-blanco);
+    width: 35%;
+  }
+
+  .seccion-uno p {
+    color: var(--color-blanco);
+    width: 40%;
+  }
+
+  .seccion-dos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.8rem;
+    gap: 4rem;
+    background-color: var(--color-gris-tenistas);
+  }
+
+  .contenedor-article {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .contenido {
+    width: 50%;
+  }
+
+  .solitario {
+    margin: auto;
+  }
+
+  .contenedor-titulo {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+  }
+
+  .enumeracion {
+    background-color: var(--color-principal);
+    padding: 1.3rem 2.4rem;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 4rem;
+  }
+
+  .info {
+    padding: 0 8rem;
+  }
+
+  .info p {
+    color: var(--color-gris-fuente);
+  }
+
+  .seccion-tres {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 4rem;
+  }
+
+  .seccion-tres h2 {
+    font-size: 3.2rem;
+    color: var(--color-h1);
+  }
+
+  .tenistas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gris-tenistas);
+    margin-top: 3.2rem;
+  }
+
+  .info-tenistas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    position: relative;
+    bottom: 4.8rem;
+    padding: 1.6rem;
+  }
+
+  .info-tenistas img {
+    border-radius: 50%;
+  }
+
+  .info-tenistas h3 {
+    color: var(--color-h1);
+  }
+
+  .info-tenistas p {
+    text-align: center;
+    color: var(--color-gris-fuente);
+  }
+
+  .seccion-cuatro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 16rem;
+    background-color: var(--color-principal);
+  }
+
+  .seccion-cuatro h2 {
+    width: 30%;
+    color: var(--color-blanco);
+  }
+
+  .boton-secundario {
+    background-color: var(--color-blanco);
+    padding: 1.4rem 0;
+    color: var(--color-principal);
+    border: none;
+    border-radius: 4rem;
+    font-size: 1.3rem;
+    width: 16rem;
+  }
+
+  footer {
+    padding: 4rem 8rem;
+    background-color: var(--color-footer);
+  }
+
+  .contenedor-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .contenedor-nav-logo {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .navbar-redes {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  .navbar-redes a {
+    color: var(--color-blanco);
+    font-size: 2.4rem;
+  }
+
+  .navbar-footer {
+    display: flex;
+    gap: 12.4rem;
+  }
+
+  .navbar-footer ul li {
+    line-height: 1.6;
+  }
+
+  .navbar-footer ul li a {
+    color: var(--color-blanco);
+  }
+
+  .contenedor-footer form {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+
+  .contenedor-footer form input {
+    padding: 1.4rem 1.4rem;
+    width: 80%;
+    border-radius: 4rem;
+  }
+
+  .boton-terciario {
+    background-color: var(--color-principal);
+    padding: 1.4rem 2.4rem;
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 4rem;
+  }
+
+  footer p {
+    text-align: end;
+    font-size: 1.4rem;
+    color: var(--color-gris-copyright);
+  }
+}
